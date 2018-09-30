@@ -1,0 +1,31 @@
+# native
+
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/shared
+#  profiles:
+#     active: native
+#  application:
+#    name: config-server
+
+server:
+  port: 8769
+
+# remote git
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/LuckyLCC/SpringCloud.git
+          searchPaths: respo #配置文件放在这个文件夹下，如果放在根目录可以不配
+          username: LuckyLCC
+          password: lc1991lc
+      label: master
+  application:
+    name: config-server
+
+
